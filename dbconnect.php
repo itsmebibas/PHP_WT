@@ -2,12 +2,10 @@
 $host="localhost";
 $user="root";
 $pass="";
-$conn=mysqli_connect($host,$user,$pass);
-if ($conn)
+$db="LearningDB";
+$conn=mysqli_connect($host,$user,$pass,$db);
+if (!$conn)
     {
-        echo "Database connected successfully";
+        die ("Database not connected successfully");
     }
-else
-    {
-    echo "Error connecting in Db";
-    }
+?>
